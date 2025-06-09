@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy System - Tu Centro Integral de Servicios Informáticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <img src="Logo.png" alt="Logo Copy System">
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#precios">Precios</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#galeria">Galería</a>
+            <a href="#quienes-somos">Quiénes Somos</a>
+            <a href="#faq">Preguntas Frecuentes</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <h1>Bienvenido a Copy System</h1>
+            <p>Tu Centro integral de servicios informáticos y de impresión.
+               Ofrecemos soluciones rápidas y de calidad para tus necesidades digitales.</p>
+            <button onclick="whatsapp()">Nuestros Servicios</button>
+        </section>
+
+        <section id="servicios" class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="tarjetas-container">
+                <div class="tarjeta">
+                    <img src="computer.png" alt="Icono de Computadora"> <h3>Uso de Computadoras</h3>
+                    <p>Equipos de última generación con conexión a internet de alta velocidad para navegar, trabajar o estudiar.</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="printer.png" alt="Icono de Impresora"> <h3>Impresiones y Copias</h3>
+                    <p>Servicio de impresión y copias en blanco y negro, y a color, en diferentes tamaños y acabados.</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="service.png" alt="Icono de Herramientas"> <h3>Servicio Técnico</h3>
+                    <p>Diagnóstico y reparación de computadoras, instalación de software y eliminación de virus.</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="wireless-router.png" alt="Icono de Redes"> <h3>Asesoría y Redes</h3>
+                    <p>Configuración de redes, soporte para periféricos y asesoría personalizada para tus proyectos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="precios" class="precios">
+            <h2>Nuestros Precios</h2>
+            <p>Aquí encontrarás una descripción detallada de nuestras tarifas por servicio.</p>
+            <div class="tabla-precios">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uso de Computadora</td>
+                            <td>Por hora</td>
+                            <td>$1.00</td>
+                        </tr>
+                        <tr>
+                            <td>Impresión B/N</td>
+                            <td>Por página</td>
+                            <td>$0.10</td>
+                        </tr>
+                        <tr>
+                            <td>Impresión Color</td>
+                            <td>Por página</td>
+                            <td>$0.50</td>
+                        </tr>
+                        <tr>
+                            <td>Copia B/N</td>
+                            <td>Por página</td>
+                            <td>$0.08</td>
+                        </tr>
+                        <tr>
+                            <td>Copia Color</td>
+                            <td>Por página</td>
+                            <td>$0.40</td>
+                        </tr>
+                        <tr>
+                            <td>Diagnóstico Técnico</td>
+                            <td>Revisión inicial del equipo</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Formateo y SO</td>
+                            <td>Instalación de sistema operativo y drivers</td>
+                            <td>$15.00</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalogo-contenedor">
+            <h2>Catálogo de Productos</h2>
+            <p>Explora nuestra selección de productos disponibles para la venta. Aquí podrás encontrar:</p>
+            <div class="catalogo">
+                <div class="producto-item">
+                    <img src="kingston 32 gb.jpeg" alt="Producto 1">
+                    <h3>Memoria USB</h3>
+                    <p>Memoria USB de 32GB para almacenamiento.</p>
+                    <span class="precio">$8.99</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>
+                <div class="producto-item">
+                    <img src="tinta-azul.gif" alt="Producto 2">
+                    <h3>Cartuchos de Tinta</h3>
+                    <p>Cartuchos compatibles para impresoras Epson.</p>
+                    <span class="precio">$15.00</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>
+                <div class="producto-item">
+                    <img src="papel-fotografico.gif" alt="Producto 3">
+                    <h3>Papel Fotográfico</h3>
+                    <p>Paquete de 100 hojas de papel fotográfico.</p>
+                    <span class="precio">9.90</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>
+                    <div class="producto-item">
+                    <img src="discoduro.jpeg" alt="Producto 4">
+                    <h3>Disco Duro Externo</h3>
+                    <p>DISCO DURO ADATA 2 TB NEGRO ANTIGOLPE AHD680-2TU31-CB</p>
+                    <span class="precio">$137.99</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>
+                    <div class="producto-item">
+                    <img src="cd-mxxel.jpg" alt="Producto 4">
+                    <h3>CD Maxell</h3>
+                    <p>CD MAXELL 80 MINUTOS SLIM 648290</p>
+                    <span class="precio">$1.60</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>
+                    <div class="producto-item">
+                    <img src="mouse.jpeg" alt="Producto 4">
+                    <h3>Mouse Inalámbrico</h3>
+                    <p>MOUSE ARGOM CLASICO USB ARG-MS-0002</p>
+                    <span class="precio">$5.99</span>
+                    <button onclick="whatsapp()"> Comprar</button>
+                </div>                
+            </div>
+            <p>¡Pronto añadiremos más productos a nuestro catálogo!</p>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h2>Nuestra Galería</h2>
+            <p>Echa un vistazo a algunas imágenes de nuestras instalaciones, equipos y trabajos realizados.</p>
+            <div class="galeria-imagenes">
+                <img src="1.jpg" alt="Imagen de la Galería 1">
+                <img src="2.jpg" alt="Imagen de la Galería 2">
+                <img src="3.jpg" alt="Imagen de la Galería 3">
+                <img src="4.jpg" alt="Imagen de la Galería 4">
+                <img src="5.jpg" alt="Imagen de la Galería 5">
+                <img src="6.jpg" alt="Imagen de la Galería 6">
+                </div>
+            <p>¡Esperamos que pronto puedas ver más de nuestro trabajo!</p>
+        </section>
+
+        <section id="quienes-somos" class="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p>En Copy System, somos un equipo apasionado dedicado a ofrecer soluciones tecnológicas y de impresión de la más alta calidad.</p>
+            <p>Contamos con un equipo de profesionales altamente capacitados y comprometidos con la satisfacción de nuestros clientes.</p>
+            <h2>Nuestra Historia</h2>
+            <p>Nacimos de la necesidad de proporcionar un centro integral donde la comunidad pudiera acceder a servicios informáticos esenciales, desde el uso de computadoras de última generación hasta impresiones rápidas y un servicio técnico confiable. Nos esforzamos por ser el aliado tecnológico de nuestros clientes, garantizando eficiencia, rapidez y un trato amable.</p>
+            <p>Con el tiempo, hemos ampliado nuestra oferta de servicios para incluir soluciones personalizadas que se adapten a las necesidades específicas de cada cliente. Nuestro equipo está en constante capacitación para mantenerse al día con las últimas tendencias y tecnologías del mercado.</p>
+            <h2>Nuestra Misión</h2>
+            <p>En Copy System, nuestra misión es simplificar la vida digital de nuestros usuarios, ofreciendo herramientas y soporte para que puedan realizar sus tareas académicas, profesionales o personales sin complicaciones. ¡Tu satisfacción es nuestra prioridad!</p>
+        </section>
+
+        <section id="faq" class="faq">
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+            <div class="faq-item">
+                <h3>¿Cuáles son sus horarios de atención?</h3>
+                <p>Estamos abiertos de Lunes a Viernes de 8:00 AM a 6:00 PM, y los Sábados de 9:00 AM a 1:00 PM.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué métodos de pago aceptan?</h3>
+                <p>Aceptamos efectivo, transferencias bancarias y pagos con tarjeta de débito/crédito.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Puedo imprimir documentos desde mi propio dispositivo?</h3>
+                <p>Sí, puedes traer tus documentos en una memoria USB o enviarlos por correo electrónico para imprimirlos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Ofrecen servicio técnico a domicilio?</h3>
+                <p>Actualmente, nuestro servicio técnico se realiza en nuestras instalaciones. Por favor, contáctanos para más detalles.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Necesito reservar para usar una computadora?</h3>
+                <p>No es necesario reservar, pero si vienes en horas pico, puede que haya una pequeña espera. Te recomendamos llamar con antelación si necesitas un horario específico.</p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <div class="contacto">
+                <div class="contacto-formulario">
+                    <p>Si tienes alguna pregunta, comentario o necesitas más información sobre nuestros servicios, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="mailto:cybercopysystem@gmail.com" method="post" enctype="text/plain">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="Subject" id="nombre" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="cc" placeholder="Escribe tu email" id="email" required>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" placeholder="Escribe tu teléfono" id="telefono">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea name="body" id="mensaje" cols="30" rows="5" required></textarea><br>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="mapa">
+                    <h3>Encuéntranos acá!</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.49218226897418!2d-88.18311622354977!3d13.481804380405928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7b2b2b48edea2b%3A0xe32390a257a4d745!2sCyber%20Copy%20System!5e0!3m2!1ses-419!2ssv!4v1748448953456!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>Dirección:4a Calle Pte y 9av norte #701, Barrio San Felipe, San Miguel</p>
+                    <p>Teléfono: 6031-5674</p>
+                    <p>Email: cybercopysystem@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+        <footer class="footer">
+        <h3>Siguenos en nuestras Redes Sociales</h3>
+        
+        <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577081975042"  class="footer-icon" target="_blank" rel="noopener noreferrer"><img src="facebook.png"></a>
+        <a href="https://www.tiktok.com/@copi.system?_t=ZM-8x2SXyBJ6Pw&_r=1" class="footer-icon" target="_blank" rel="noopener noreferrer"><img src="tik-tok.png"></a>
+        <a href="https://www.instagram.com/systemcopi?igsh=YzZmZTlyc21xcnFl" class="footer-icon" target="_blank" rel="noopener noreferrer"><img src="instagram.png"></a>
+        <a href="https://x.com/CopiSystem70129?t=QbRdtQVQRhp3F7xpVnd0xA&s=09"class="footer-icon" target="_blank" rel="noopener noreferrer"><img src="twitter.png"></a>
+        <a href="https://wa.me/50360315674"target="_blank" rel="noopener noreferrer" class="footer-icon" ><img src="whatsapp.png"></a></div>
+
+        <div>
+        <p> 2025 Copy System. Todos los derechos reservados.</p>
+         </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

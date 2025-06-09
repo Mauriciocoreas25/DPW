@@ -1,0 +1,416 @@
+/* Base */
+body {
+    font-family: 'Arial', sans-serif;/*fiuente */
+    background: linear-gradient(to bottom, #89F7FE, #66A6FF); /* Degradado de azul claro a azul mediopara el fondo general  */
+    color: #333;
+}
+
+/* Encabezado */
+.encabezado {
+    background: linear-gradient(to right, #1E90FF, #00BFFF); /* Degradado para el encabezado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; /* Fija el encabezado en la parte superior */
+    top: 0; /* Fija el encabezado en la parte superior de la página */
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+    z-index: 1000;
+}
+
+.encabezado img {
+    width: 80px; /* Tamaño más consistente */
+    height: 80px;
+    border-radius: 50%; /* Hacer el logo redondo */
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+
+.encabezado nav a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; 
+    border-radius: 5px;
+}
+
+.encabezado nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al pasar el mouse */
+    transform: scale(1.05);/* funciona para hacer mas grande el   texto al pasar el cursor sobre los   links */
+}
+section {
+    padding:50px;
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para el contenido */
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 3em;
+    color: #1E90FF; /* Azul para los títulos de sección */
+    margin-bottom: 40px;
+    position: relative;
+}
+.inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    text-align: center;
+    height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px; /* Bordes redondeados solo abajo */
+}
+
+.inicio h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.inicio p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.inicio button {
+    background-color: #00BFFF; /* Azul cielo */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50px; /* Botón más redondeado */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.inicio button:hover {
+    background-color: #1E90FF; /* Azul real */
+    transform: translateY(-3px); /*efecto visual de  movimiento o dezplazamiento */
+}
+
+/* Contenedor de Tarjetas (Servicios) */
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center;
+    gap: 40px; /* Espacio entre las tarjetas */
+    margin-top: 40px;
+}
+
+.tarjeta {
+    background-color: #E0FFFF; /* Azul claro */
+    width: 320px; /* Ancho fijo para las tarjetas */
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+    width: 90px; /* Iconos más grandes */
+    height: 90px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: contain; /* Asegura que la imagen se vea bien */
+}
+
+.tarjeta h3 {
+    color: #1E90FF; /* Azul para los títulos de las tarjetas */
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #555;
+    font-size: 16px;
+}
+
+.tabla-precios {
+    display: table; /* Utiliza el modelo de tabla */
+    width: 100%; /* Ancho completo */
+    border-collapse:collapse;/*elimina la visualizacion del  borde */
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.tabla-precios th, .tabla-precios td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center; /* Centra el texto en las celdas */
+}
+
+.tabla-precios th {
+    width: 30%; /* Ancho fijo para la columna de títulos */
+    background-color: #1E90FF;
+    color: white;
+    font-weight: bold; /*negrita en el texto*/
+    text-transform: uppercase; /*transforma a mayuscula el texto del encabezado */
+}
+
+.tabla-precios tr:hover {
+    background-color: #e9e9e9;
+}
+.catalogo-contenedor p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+}
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tres columnas de igual tamaño, ajusta el tamaño mínimo a 300px */
+  gap: 20px; /* Espacio entre los productos */
+}
+.producto-item {
+    display: block;
+    flex-direction: wrap; /* Permite que el contenido se ajuste */
+    align-items: center;
+    background-color: #F0F8FF; /* Azul claro */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Ancho fijo para los productos */
+    height: 300px; /* Altura fija para los productos */
+    text-align: center; /* Centra el texto dentro del producto */
+}
+.producto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.producto-item img {
+    max-width: 100%;
+    height: 125px; /* Altura fija para las imágenes del producto */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.producto-item h3 {
+    color: #1E90FF;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.producto-item p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.producto-item .precio {
+    display: block;
+    font-size: 1.8em;
+    color: #00BFFF; /* Azul cielo para el precio */
+    font-weight: bold;
+}
+.producto-item button {
+    background-color: #1E90FF; /* Azul para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+.galeria-imagenes img {
+    width: 300px; /* Ancho completo de la imagen */
+    height: 300px; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.galeria img:hover {
+    transform: scale(1.03);
+}
+.galeria p{
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    padding: 20px;
+}
+.quienes-somos {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para una mejor disposición */
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra la sección */
+    margin-top: 40px; /* Espacio superior */
+    margin-bottom: 40px; /* Espacio inferior */  
+}
+.quienes-somos p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    max-width: 800px; /* Ancho máximo para el texto */
+}
+.faq {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para una mejor disposición */
+    align-items: center;
+    text-align: left;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra la sección */
+    margin-top: 40px; /* Espacio superior */
+    margin-bottom: 40px; /* Espacio inferior */  
+}
+.faq-item {
+    background-color: #E0FFFF; /* Azul claro */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre preguntas */
+    width: 100%; /* Ancho completo */
+    max-width: 1000px;
+    border-left: 10px solid #1E90FF; /*para el borde decorado de lado izquierdo*/
+    padding-right: 10px; /*espacio entre el  borde decorado y el  texto o centenido */
+}
+.faq-item h3 {
+    color: #1E90FF; /* Azul para los títulos de las preguntas */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.faq-item p {
+    color: #555;
+    font-size: 1.2em;
+    margin: 0; /* Elimina el margen para un mejor espaciado */
+}
+.contacto{
+    display:flex;
+    justify-content: space-between; /* Alinea el contenido a los extremos */
+;
+}
+.contacto-formulario{
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-right: 20px; /* Espacio entre el formulario y el mapa */
+    max-width: 600px; /* Ancho máximo del formulario */
+
+
+}
+
+.contacto-formulario h3 {
+    color: #1E90FF; /* Azul para el título del formulario */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.contacto-formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio entre campos */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em;
+}
+.contacto-mapa{
+    width: 50%;
+    height: 400px; /* Altura del mapa */
+    border-radius: 10px;
+    overflow: hidden; /* Para que el mapa no sobresalga del contenedor */   
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);/* Sombra para el mapa */
+}
+.contacto-formulario p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+
+.footer {
+    background: linear-gradient(to right, #1E90FF, #00BFFF); /* Degradado para el pie de página */
+    color: white;
+    text-align: center;
+    padding: 20px 0;  /*Espacio interior arriba y abajo */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo arriba */
+}
+
+.footer-icons { 
+    margin-bottom: 15px;  /*Espacio debajo de los iconos antes del texto legal*/
+}
+
+.footer-icon img {
+    width: 32px; /*Ancho del icono*/
+    height: 32px; /*Altura del icono*/
+    margin: 0 8px; /*Espacio horizontal entre iconos*/
+    transition: transform 0.3s ease; /*Suaviza la animacion al hacer hover*/
+}
+
+.footer-icon img:hover {
+     transform: scale(1.2);/*Aumenta ligeramente el tamaño al pasar el mouse*/
+     
+}
+
+.footer p{
+    margin: 10px 0 0 0; /*Margen arriba del texto legal*/
+    font-size: 14px; /*Tamano del texto legal*/
+    color: #f0f0f0;; /*Gris claro para contraste sobre fondo azul*/
+}
+
+.contacto-formulario button {
+    background-color: #1E90FF; /* Azul para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contacto-formulario button:hover {
+    background-color: #00BFFF; /* Azul cielo al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento al pasar el mouse */
+}
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    border-color: #1E90FF; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+.contacto-mapa iframe {
+    width: 100%; /* Ancho completo del mapa */
+    height: 100%; /* Altura completa del mapa */
+    border: 0; /* Elimina el borde del iframe */
+    border-radius: 10px; /* Bordes redondeados para el mapa */
+    /*responsive */
+    max-width: 100%; /* Asegura que el mapa no sobresalga del contenedor */
+    max-height: 100%; /* Asegura que el mapa no sobresalga del contenedor */
+}
