@@ -3,7 +3,9 @@ body {
     font-family: 'Arial', sans-serif;/*fiuente */
     background: linear-gradient(to bottom, #89F7FE, #66A6FF); /* Degradado de azul claro a azul mediopara el fondo general  */
     color: #333;
+
 }
+
 
 /* Encabezado */
 .encabezado {
@@ -16,10 +18,12 @@ body {
     top: 0; /* Fija el encabezado en la parte superior de la página */
     width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
     z-index: 1000;
+    max-width: 1300px; /* Ancho máximo del encabezado */
 }
 
 .encabezado img {
-    width: 80px; /* Tamaño más consistente */
+    width: 100%;
+    max-width: 80px; /* Tamaño más consistente */
     height: 80px;
     border-radius: 50%; /* Hacer el logo redondo */
     object-fit: cover;
@@ -30,7 +34,7 @@ body {
 .encabezado nav a {
     color: white; /* Color blanco para los enlaces */
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
     padding: 10px 15px; 
     border-radius: 5px;
 }
@@ -45,6 +49,7 @@ section {
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para el contenido */
     border-radius: 10px;
     max-width: 1200px;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
 }
 
 section h2 {
@@ -58,25 +63,30 @@ section h2 {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     color: white;
     text-align: center;
-    height: 300px; 
+    padding: 50px 20px;
+    max-height: 500px; /* Limita la altura del contenedor */
+    height: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0 0 10px 10px; /* Bordes redondeados solo abajo */
+    box-sizing: border-box;
 }
-
 .inicio h1 {
-    font-size: 4em;
+    font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    max-height: 100px; /* Limita la altura del título */
+    overflow: hidden; /* Evita que el texto se desborde */
 }
-
 .inicio p {
     font-size: 1.5em;
-    margin-bottom: 30px;
-    max-width: 700px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: #f0f0f0; /* Gris claro para el texto */
+    margin-top: 20px;
+    max-width: 800px; /* Ancho máximo para el párrafo */
+    text-align: center; /* Centra el texto */
 }
+
 
 .inicio button {
     background-color: #00BFFF; /* Azul cielo */
@@ -140,7 +150,17 @@ section h2 {
     color: #555;
     font-size: 16px;
 }
-
+.precios{
+    overflow-x: auto;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+}
+.precios p{
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+}
 .tabla-precios {
     display: table; /* Utiliza el modelo de tabla */
     width: 100%; /* Ancho completo */
@@ -148,30 +168,36 @@ section h2 {
     margin: 0 auto;
     background-color: #f9f9f9;
     border-radius: 10px;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    overflow-x: auto;
 }
 
 .tabla-precios th, .tabla-precios td {
     border: 1px solid #ddd;
     padding: 12px 15px;
     text-align: center; /* Centra el texto en las celdas */
+    box-sizing: border-box;
 }
 
 .tabla-precios th {
-    width: 30%; /* Ancho fijo para la columna de títulos */
+    width: 30%; /* Ancho fijo para los encabezados */
     background-color: #1E90FF;
     color: white;
     font-weight: bold; /*negrita en el texto*/
     text-transform: uppercase; /*transforma a mayuscula el texto del encabezado */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 .tabla-precios tr:hover {
     background-color: #e9e9e9;
 }
+
 .catalogo-contenedor p {
     text-align: center;
     font-size: 1.2em;
     color: #555;
     margin-top: 20px;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
 }
 .catalogo {
   display: grid;
@@ -187,7 +213,7 @@ section h2 {
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Ancho fijo para los productos */
+    max-width: 300px; /* Ancho fijo para los productos */
     height: 300px; /* Altura fija para los productos */
     text-align: center; /* Centra el texto dentro del producto */
 }
@@ -233,18 +259,48 @@ section h2 {
     border-radius: 5px; /* Bordes redondeados */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.producto-item button:hover {
+    background-color: #00BFFF; /* Azul cielo al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento al pasar el mouse */
+}
+.galeria{
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+}
 .galeria-imagenes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));/* Tres columnas de igual tamaño, ajusta el tamaño mínimo a 280px */
     gap: 20px; /* Espacio entre las imágenes */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    padding: 20px; /* Añade un poco de padding interno para evitar que las imágenes peguen a los bordes de la sección */
+}
+
+.galeria-imagenes img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block; /* elimina el espacio debajo de las imágenes */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Suaviza la animación al pasar el mouse */
+    object-fit: cover; /* Recorta la imagen si es necesario para llenar el espacio sin distorsionar */
+}
+.galeria-imagenes img:hover {
+    transform: scale(1.03);
+}
+
+.galeria p{ /* Asumo que 'galeria' es el contenedor de la sección, no el de las imágenes */
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    padding: 20px;
 }
 .galeria-imagenes img {
-    width: 300px; /* Ancho completo de la imagen */
-    height: 300px; /* Mantiene la proporción de la imagen */
+    max-width: 300px; /* Ancho completo de la imagen */
+    max-height: 300px; /* Mantiene la proporción de la imagen */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.galeria img:hover {
+.galeria-imagenes img:hover {
     transform: scale(1.03);
 }
 .galeria p{
@@ -291,7 +347,7 @@ section h2 {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px; /* Espacio entre preguntas */
-    width: 100%; /* Ancho completo */
+    width: 90%; /* Ancho completo */
     max-width: 1000px;
     border-left: 10px solid #1E90FF; /*para el borde decorado de lado izquierdo*/
     padding-right: 10px; /*espacio entre el  borde decorado y el  texto o centenido */
@@ -306,9 +362,15 @@ section h2 {
     font-size: 1.2em;
     margin: 0; /* Elimina el margen para un mejor espaciado */
 }
+.faq-item:hover {
+    background-color: #d0f0fd; /* Cambia el color de fondo al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra para un efecto de elevación */
+}
 .contacto{
     display:flex;
     justify-content: space-between; /* Alinea el contenido a los extremos */
+    box-sizing: border-box;
 ;
 }
 .contacto-formulario{
@@ -406,11 +468,10 @@ section h2 {
     outline: none; /* Elimina el contorno predeterminado */
 }
 .contacto-mapa iframe {
-    width: 100%; /* Ancho completo del mapa */
-    height: 100%; /* Altura completa del mapa */
-    border: 0; /* Elimina el borde del iframe */
-    border-radius: 10px; /* Bordes redondeados para el mapa */
-    /*responsive */
-    max-width: 100%; /* Asegura que el mapa no sobresalga del contenedor */
-    max-height: 100%; /* Asegura que el mapa no sobresalga del contenedor */
+    width: 100%; /* El iframe ocupa el 100% del ancho de su padre */
+    height: auto; /* La altura se ajustará automáticamente */
+    aspect-ratio: 16 / 9; /* Establece una proporción de 16:9 (ancho:alto). Puedes ajustar esto a 4 / 3, 1 / 1, etc., según la proporción que desees para el mapa. */
+    border: 0;
+    border-radius: 5px;
+    display: block; /* Asegura que no haya espacios extra debajo del iframe */
 }
