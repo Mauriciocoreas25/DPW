@@ -475,3 +475,174 @@ section h2 {
     border-radius: 5px;
     display: block; /* Asegura que no haya espacios extra debajo del iframe */
 }
+/* Adaptación para pantallas de tablets y laptops pequeñas (máximo 992px de ancho) */
+@media (max-width: 992px) {
+    /* Encabezado */
+    .encabezado {
+        padding: 10px; /* Reducir padding */
+    }
+    .encabezado nav a {
+        font-size: 16px; /* Reducir tamaño de fuente de los enlaces de navegación */
+        padding: 8px 12px;
+    }
+
+    /* Sección Inicio */
+    .inicio h1 {
+        font-size: 3.2em; /* Reducir tamaño de título principal */
+    }
+    .inicio p {
+        font-size: 1.3em; /* Reducir tamaño de párrafo principal */
+        max-width: 90%; /* Ajustar el ancho máximo del párrafo */
+    }
+
+    /* Secciones Generales */
+    section {
+        margin: 30px auto; /* Reducir margen entre secciones */
+        padding: 15px; /* Reducir padding de las secciones */
+    }
+
+    /* Servicios - Tarjetas */
+    .tarjeta {
+        max-width: 45%; /* Permitir que las tarjetas sean un poco más grandes si solo hay 2 por fila */
+        min-width: 250px; /* Asegurar que no se hagan demasiado pequeñas */
+    }
+
+    /* Catálogo - Productos */
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Permitir que sean 2 o 1 columna si el espacio es limitado */
+        gap: 15px;
+    }
+
+    /* Galería - Imágenes */
+    .galeria-imagenes {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 o 1 columna */
+        gap: 15px;
+    }
+}
+
+/* Adaptación para pantallas de móviles (máximo 768px de ancho) */
+@media (max-width: 768px) {
+    /* Encabezado */
+    .encabezado {
+        flex-direction: column; /* Apilar logo y navegación */
+        align-items: center;
+        padding: 15px 10px;
+        position: static; /* No sticky en móviles para que no ocupe espacio fijo */
+    }
+    .encabezado img {
+        margin-bottom: 10px; /* Espacio debajo del logo */
+    }
+    .encabezado nav {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los enlaces se envuelvan */
+        justify-content: center; /* Centrar enlaces */
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+    .encabezado nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin: 5px; /* Espacio entre enlaces envueltos */
+    }
+
+    /* Sección Inicio */
+    .inicio {
+        min-height: 250px; /* Ajustar altura mínima */
+        padding: 10px;
+    }
+    .inicio h1 {
+        font-size: 2.2em; /* Reducir aún más */
+    }
+    .inicio p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    .inicio button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    /* Secciones Generales */
+    section h2 {
+        font-size: 1.8em; /* Reducir títulos de sección */
+    }
+
+    /* Servicios - Tarjetas */
+    .tarjetas-container {
+        flex-direction: column; /* Apilar las tarjetas */
+        align-items: center; /* Centrar las tarjetas apiladas */
+    }
+    .tarjeta {
+        width: 90%; /* Ocupar casi todo el ancho */
+        max-width: 350px; /* Un poco más de ancho máximo en modo apilado */
+    }
+
+    /* Catálogo - Productos */
+    .catalogo {
+        grid-template-columns: 1fr; /* Una sola columna para móviles */
+        padding: 10px;
+    }
+    .producto-item {
+        padding: 10px;
+    }
+
+    /* Galería - Imágenes */
+    .galeria-imagenes {
+        grid-template-columns: 1fr; /* Una sola columna para móviles */
+        padding: 10px;
+    }
+
+    /* Precios - Tabla */
+    .tabla-precios {
+        display: block; /* La tabla ya no se comporta como una tabla HTML por defecto */
+        width: 100%; /* Ocupa todo el ancho */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es demasiado ancha */
+        -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
+    }
+    .tabla-precios table { /* Asegura que la tabla real pueda desbordarse */
+        width: 600px; /* Un ancho fijo para forzar el scroll horizontal */
+        min-width: 100%; /* Pero al menos el 100% de su contenedor */
+    }
+    .tabla-precios th, .tabla-precios td {
+        padding: 8px; /* Reducir padding de celdas */
+        font-size: 0.9em;
+    }
+
+
+    /* Contacto */
+    .contacto {
+        flex-direction: column; /* Apilar formulario y mapa */
+        align-items: center;
+    }
+    .contacto-formulario,
+    .contacto-mapa {
+        flex: 1 1 100%; /* Ocupar todo el ancho disponible */
+        max-width: 400px; /* Limitar el ancho máximo si es necesario */
+        padding: 15px;
+    }
+    .contacto-formulario input,
+    .contacto-formulario textarea {
+        width: calc(100% - 20px); /* Ajusta si hay padding interno */
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .footer-icons {
+        margin-top: 10px;
+    }
+}
+
+/* Adaptación para pantallas de móviles muy pequeños (máximo 480px de ancho) */
+@media (max-width: 480px) {
+    /* Sección Inicio */
+    .inicio h1 {
+        font-size: 1.8em; /* Para asegurar que quepa bien en los más pequeños */
+    }
+    .inicio p {
+        font-size: 0.9em;
+    }
+
+}
